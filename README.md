@@ -13,6 +13,75 @@ question → answer → evaluation → decision → { follow-up | hint | next | 
 **Stack** — Next.js 16 (App Router, TypeScript, Tailwind v4) · FastAPI · SQLAlchemy ·
 PostgreSQL · Redis · WebSockets · OpenAI Responses API with Structured Outputs.
 
+![Landing page](docs/screenshots/01-landing.png)
+
+---
+
+## Screenshots
+
+### The interview room
+
+The adaptive loop, on screen: the answer is scored the moment it lands, and that score is
+what decides whether the next line is a follow-up, a hint, or a new question. Here the
+answer scored 83, so the interviewer probed deeper instead of moving on.
+
+![Interview room — answer, evaluation and follow-up](docs/screenshots/07-adaptive-loop.png)
+
+Live progress, a running average and the skills being probed sit alongside the transcript.
+
+![Interview room — composing an answer](docs/screenshots/06-interview-room.png)
+
+### Dashboard
+
+Totals, average, streak, score-and-confidence trend, skill radar, and strong/weak skills —
+all derived from per-answer evaluations rather than a single end-of-interview score.
+
+![Dashboard](docs/screenshots/03-dashboard.png)
+
+<details>
+<summary>Full dashboard</summary>
+
+![Dashboard, full page](docs/screenshots/04-dashboard-full.png)
+
+</details>
+
+### Setting up a round
+
+Upload a resume and paste a job description; both are parsed into structured profiles, and
+the extracted skills are what the questions are built from.
+
+![Interview setup](docs/screenshots/05-interview-setup.png)
+
+### The report
+
+Overall score, readiness percentage, prep-time estimate, per-dimension breakdown, a skill
+radar and the strengths/areas-to-improve split — exportable as PDF.
+
+![Interview report](docs/screenshots/08-report.png)
+
+The coach turns the weak areas into something actionable: what you got wrong, what to
+study, and an ordered plan with a mini project per topic.
+
+![Report — coaching and learning plan](docs/screenshots/09-report-coaching.png)
+
+Every question, answer and score is kept, so a report can be read back turn by turn.
+
+![Report — scored transcript](docs/screenshots/10-report-transcript.png)
+
+The same report for a system-design round, run in Google's interview style.
+
+![System design report](docs/screenshots/11-report-system-design.png)
+
+### Sign-in and API
+
+![Sign in](docs/screenshots/02-sign-in.png)
+
+![OpenAPI docs](docs/screenshots/12-api-docs.png)
+
+> Screenshots were captured against the built-in deterministic mock provider
+> (`AI_PROVIDER=mock`), so the app runs end to end with no API key — see
+> [It runs without an OpenAI key](#it-runs-without-an-openai-key).
+
 ---
 
 ## Quick start
